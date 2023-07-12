@@ -1,116 +1,108 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Lato:wght@300;400;700;900&display=swap');
 .container-page2{
-width: 100%;
-height: 140vh;
-position: relative;
+  width: 100%;
+  height: 150vh;
+  position: relative;
+  display: flex;
 }
 .column-page2{
+  width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.background1Page2{
+.column-1-background1Page2{
     width: 100%;
     height: 70vh;
-    background-image: url(../assets/img/bg3.jpg);
+    background-image: linear-gradient(190deg, rgba(27, 36, 48, 0.906) 0%, rgba(27, 36, 48, 0.916) 90%), url(../assets/img/bg3.jpg);
     background-size: cover;
     background-position: center ;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .container-title-page2{
-    width: 100%;
+    width: 95%;
     height: 70vh;
     color: white;
-    justify-items: center;
     text-align: center;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
-    padding: 30px;
-    position: absolute;
-    top: 0;
+    gap: 15px;
     }
 .text1{
     font-family: 'Lato', sans-serif;
     font-weight: 500;
     font-size: large;
     color: goldenrod;
+    margin: 0;
 }
 .text2{
     font-family: 'Lato', sans-serif;
     font-weight: 600;
     font-size: 30px;
+    margin: 0;
 }
 .text3{
     font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: x-large;
+    font-weight: 300;
+    font-size: large;
     margin-top: 360px;
+    margin: 0;
 }
 
-.opacityBg{
-    width: 100%;
-    height: 70vh;
-    background-color: rgb(0, 0, 0);
-    opacity: 0.88;
-    position: absolute;
-    top: 0;
-}
 .container-Gallery{
     width: 100%;
-    display: flex ;
+    display: flex;
     flex-direction:row;
     align-items: center;
-    justify-content:space-around;
-    position: absolute;
+    justify-content: space-evenly;
     top: 0;
-    margin-top: 18vh;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     /* animation: slide 5s infinite; */
 }
 .card2{
     height: 270px;
     width: 270px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 0%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .card2 img{
-    height: 270px;
-    width: 270px;
+    height: auto;
+    border-radius: 5px;
+    width: 100%;
     transition: all .4s ease-in-out;
 }
-.card2  img:hover{
+.card2 img:hover{
   transform: scale(1.1);
 }
-.row-2{
+.column-2-background1Page2{
     display: flex;
-    width: 100%;
-    height: 70vh;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    width: 100%;
+    height: 90vh;
+    background-color: #D9D9D9;
 }
 /* Page 2 bawah */
-.background2Page2{
-  width: 100%;
-  height: 70vh;
-  background-color:  #D9D9D9;
-  /* background: linear-gradient(to right, #000000, #131126, #000000); */
-  position: absolute;
-}
 .text5{
+  display: flex;
   font-size: 60px;
   font-weight: 550;
-  margin-bottom: 440px;
-  position: absolute;
   color: #313030;
+  margin: 20px;
   font-family: 'Dancing Script', cursive;
 }
 .wrapper {
-  padding: 0px 200px;
-    width: 100%;
-    position: absolute;
+    margin-top: -60px;
+    width: 80%;
   }
   .wrapper .carousel{
     display: grid;
@@ -121,9 +113,8 @@ position: relative;
     border-radius: 8px;
     scroll-behavior: smooth;
     scrollbar-width: none;
-    margin: 12px;
+    margin: 20px;
     padding: 10px;
-    
   }
   .carousel::-webkit-scrollbar {
     display: none;
@@ -137,16 +128,17 @@ position: relative;
   
   .carousel .card3 {
     scroll-snap-align: start;
-    height: 345px;
     width: 250px;
+    height: 345px;
     list-style: none;
     background: #ffffff;
     cursor: pointer;
     padding-bottom: 37px;
     flex-direction: column;
+    gap: 10px;
+    text-align: center;
     margin-top: 70px;
     border-radius: 3px;
-    box-shadow:  -7px -7px 14px #b4b4b4,7px 7px 14px #fefefe;
   }
   .card3  img {
     width: 250px;
@@ -160,7 +152,7 @@ position: relative;
     color: #151515;
     font-weight: 500;
     font-size: 18px;
-    margin: 10px 0 5px;
+    /* margin: 10px 0 5px; */
     text-align: center;
   }
   .carousel .card3 span {
@@ -168,20 +160,17 @@ position: relative;
     font-size: 14px;
     font-family: 'Lato', sans-serif;
   }
-  
-  a{
+
+  .icons a{
+    position: relative;
     margin: 4px;
     color: #000000;
-    font-size: 20px;
-  }
-  .icons{
-    z-index: 3;
+    font-size: 22px;
+    transition: all 0.5s ease;
   }
   .icons a:hover{
-    font-size: 28px;
-    color: #000000;
-    background-color: #ffffff;
-    transition: all 0.3s ease;
+    color: #C59D5F;
+    transition: all 0.5s ease;
   }
 
   @media screen and (max-width: 900px) {

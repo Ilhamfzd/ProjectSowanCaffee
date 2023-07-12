@@ -1,29 +1,45 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "../css/Reservation.css";
 import BtnCloseReservation from "../Controller/ClosePopupBtn";
-
-import emailjs from '@emailjs/browser';
+import ModalPopup from "./modalpopup";
+import emailjs from "@emailjs/browser";
 
 function Reservation() {
-  
+  const [isEmailSent, setIsEmailSent] = useState(false);
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_6n1u5uw', 'template_kqosjtj', form.current, 'ZwxbboJHLTYyd-Oz6')
-      .then((result) => {
+    emailjs
+      .sendForm(
+        "service_6n1u5uw",
+        "template_kqosjtj",
+        form.current,
+        "ZwxbboJHLTYyd-Oz6"
+      )
+      .then(
+        (result) => {
           console.log(result.text);
-      }, (error) => {
+          setIsEmailSent(true); // Mengubah state menjadi true setelah email berhasil dikirim
+          setTimeout(() => {
+            setIsEmailSent(false);
+          }, 3000);
+          form.current.reset();
+        },
+        (error) => {
           console.log(error.text);
-      });
+        }
+      );
   };
 
-  
   return (
     <div className="container-bx-reservation animate__fadeIn animate__duration-0.5s">
+      {isEmailSent && <ModalPopup />}
       <div className="bx-reservation animate__animated animate__fadeInDown">
-        <h3 className="Booking-text animate__animated animate__fadeIn animate__delay-0.5s">BOOKING RESERVATION</h3>
+        <h3 className="Booking-text animate__animated animate__fadeIn animate__delay-0.5s">
+          BOOKING RESERVATION
+        </h3>
         <BtnCloseReservation />
         <div className="heading-date animate__animated animate__fadeIn animate__delay-1s">
           <div className="opening-hours">
@@ -37,7 +53,11 @@ function Reservation() {
             <p className="time-text">8:00 am – 11:00 pm</p>
           </div>
         </div>
-        <form ref={form} onSubmit={sendEmail} className="Input-Reservation animate__animated animate__fadeIn animate__delay-1s">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="Input-Reservation animate__animated animate__fadeIn animate__delay-1s"
+        >
           <div className="column-input">
             <div className="row-input">
               <div className="Input-Bx-Name">
@@ -45,7 +65,7 @@ function Reservation() {
                 <span>Name</span>
               </div>
               <div className="Input-Bx-Email">
-                <input type="email" required name="email"/>
+                <input type="email" required name="email" />
                 <span>Email</span>
               </div>
               <div className="Input-Bx-Phone">
@@ -55,15 +75,15 @@ function Reservation() {
             </div>
             <div className="row-input">
               <div className="Input-Bx-Date">
-                <input type="date" required name="date"/>
+                <input type="date" required name="date" />
                 <span>Date</span>
               </div>
               <div className="Input-Bx-Time">
-                <input type="time" required name="time"/>
+                <input type="time" required name="time" />
                 <span>Time</span>
               </div>
               <div className="Input-Bx-Sheet">
-                <input type="number" required name="sheet"/>
+                <input type="text" required name="sheet" />
                 <span>Sheets</span>
               </div>
             </div>
@@ -74,7 +94,9 @@ function Reservation() {
               </div>
             </div>
             <div className="row-input">
-              <button type="submit" className="Submit-bx">SUBMIT NOW</button>
+              <button type="submit" className="Submit-bx">
+                SUBMIT NOW
+              </button>
             </div>
           </div>
         </form>

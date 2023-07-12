@@ -15,10 +15,6 @@ export const Selection = () => {};
 function Page3() {
   useEffect(() => {
     AOS.init();
-    // document.getElementById("instaBtn").onclick = function () {
-    //   window.open('https://www.instagram.com/p/CEM0lk6Avx6/','_blank');
-
-    // }
   }, []);
   return (
     <div className="column-container-page3">
@@ -105,7 +101,9 @@ function Page3() {
               <div id="descTime">October 4, 2018</div>
             </div>
             <div className="container-art-text">
-              <h6>Delicious Prime Beef Steak with Chef's Signature Mayo Sauce</h6>
+              <h6>
+                Delicious Prime Beef Steak with Chef's Signature Mayo Sauce
+              </h6>
               <p>
                 A superb mayonnaise sauce gives the delectable steak a savory
                 flavor and alluring texture. <span>read more..</span>

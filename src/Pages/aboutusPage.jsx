@@ -1,10 +1,10 @@
 import React from "react";
 import AboutUsComp from "../View/aboutus";
-import Aboutus2 from "../View/aboutUs2";
 import Navigation from "../View/navigation";
 import Footer from "../View/footer";
+import Aboutus2 from "../View/aboutus2";
 
-function AboutUs(){
+function AboutUsPage(){
     return(
         <>   
             <Navigation />
@@ -14,4 +14,4 @@ function AboutUs(){
         </>
     );
 }
-export default AboutUs;
+export default AboutUsPage;

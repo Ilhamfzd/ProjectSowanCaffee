@@ -2,8 +2,8 @@ import "../css/Footter.css";
 import React from "react";
 import logo from "../assets/img/Sowan Caffe Logo.svg";
 import { FaFacebook } from "react-icons/fa";
-import { FaInstagram } from 'react-icons/fa';
-import { FaTwitter } from 'react-icons/fa';
+import { FaInstagram } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
 import iconclock from "../assets/icons/clock.svg";
 import coffee from "../assets/img/BestLatteArt.jpg";
 import burgerChese from "../assets/img/burger4.jpg";
@@ -32,18 +32,18 @@ function Footer() {
                     content.
                   </p>
                   <div className="row-sosmed-icon">
-                    <a
-                      className="icon-sosmed"
-                      href="https://www.facebook.com/"
-                    ><FaFacebook /></a>
+                    <a className="icon-sosmed" href="https://www.facebook.com/">
+                      <FaFacebook />
+                    </a>
                     <a
                       className="icon-sosmed"
                       href="https://www.instagram.com/"
-                    ><FaInstagram /></a>
-                    <a
-                      className="icon-sosmed"
-                      href="https://twitter.com/"
-                    ><FaTwitter /></a>
+                    >
+                      <FaInstagram />
+                    </a>
+                    <a className="icon-sosmed" href="https://twitter.com/">
+                      <FaTwitter />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -124,38 +124,38 @@ function Footer() {
               <div className="menu-four-footer">
                 <div className="column-four-footer">
                   <h3 className="heading-menu-four">Contact US</h3>
-                    <div className="row-content">
-                      <img
-                        className="icon-four-footer"
-                        src={IconPhone}
-                        alt="icon-phone"
-                      ></img>
-                      <h4 className="text-four">0820230606</h4>
-                    </div>
-                    <div className="row-content">
-                      <img
-                        className="icon-four-footer"
-                        src={IconAddress}
-                        alt="icon-address"
-                      ></img>
-                      <h4 className="text-four">
-                        42 Jl. Kaliurang Daerah Istimewa Yogyakarta
-                      </h4>
-                    </div>
-                    <div className="row-content">
-                      <img
-                        className="icon-four-footer"
-                        src={IconEmail}
-                        alt="icon-email"
-                      ></img>
-                      <h4 className="text-four">sowancaffe@gmail.com</h4>
-                    </div>
+                  <div className="row-content">
+                    <img
+                      className="icon-four-footer"
+                      src={IconPhone}
+                      alt="icon-phone"
+                    ></img>
+                    <h4 className="text-four">0820230606</h4>
+                  </div>
+                  <div className="row-content">
+                    <img
+                      className="icon-four-footer"
+                      src={IconAddress}
+                      alt="icon-address"
+                    ></img>
+                    <h4 className="text-four">
+                      42 Jl. Kaliurang Daerah Istimewa Yogyakarta
+                    </h4>
+                  </div>
+                  <div className="row-content">
+                    <img
+                      className="icon-four-footer"
+                      src={IconEmail}
+                      alt="icon-email"
+                    ></img>
+                    <h4 className="text-four">sowancaffe@gmail.com</h4>
                   </div>
                 </div>
               </div>
+            </div>
           </section>
           <h5 className="Copyright">
-            Copyrights © 2023 <span>Sowan Caffe.</span> Designed by 
+            Copyrights © 2023 <span>Sowan Caffe.</span> Designed by
             <span> sowancaffe</span>
           </h5>
         </div>
